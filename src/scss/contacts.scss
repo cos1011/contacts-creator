@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    font-size: 62.5%;
+}
+
+.App {
+    height: 100vw;
+    width: 100vw;
+    background-image: linear-gradient(rgba(88, 88, 122, 0.3), rgba(121, 148, 158, 0.3)), url('../images/main-background.jpg');
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+// VARIABLES
+$color-submit-btn: #acacbb; 
+@mixin btn-edit-delete {
+    font-size: .5rem;
+    width: 3rem;
+    height: 2rem;
+}
+
+// CONTACT FORM
+
+.contact-form-container {
+    width: 100vw;
+    position: relative;
+}
+
+.form-panel {
+    h4 {
+        color: ghostwhite;
+        font-size: 2.4rem;
+    }
+    font-size: 4.5rem;
+    margin: .7rem 0;
+    padding: .5rem;
+    width: 20rem;
+    height: 30rem;
+    position: absolute;
+    left: 20%;
+    transform: translate(-20%);
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    border: 1px solid cyan;
+    border-radius: .4rem;
+
+    background-image: linear-gradient(rgb(0, 0, 255, 0.3), rgb(255, 0, 0, 0.3)), url('../images/contact-form.jpg');
+    background-size: cover;
+}
+
+
+
+.field-group {
+    margin: .5rem;
+    padding: .4rem;
+    // border: 1px solid black;
+    // border-radius: .5rem;   
+    // width: 60rem;
+    // place-items: center;
+    color: white;
+    position: relative;
+    display: grid;
+    grid-template-columns: 13rem;
+    grid-template-rows: 5rem 5rem 5rem 5rem;
+    column-gap: 2rem;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.field {
+    &:last-child {
+        background-color: blue;
+    }
+    padding: .5rem;
+    width: 15rem;
+    position: relative;
+    input {
+        top: 50%;
+        transform: translate(0, -50%);
+        position: absolute;
+        right: 2rem;
+    }
+    label {
+        top: 50%;
+        transform: translate(0, -50%);
+        position: absolute;
+        left: 1.4rem;
+        color: black;
+    }
+    // height: 5rem;
+    background-color: rgb(143, 131, 131);
+    border-radius: 2rem;
+}
+
+.submit-btn {
+    padding: .2rem;
+    width: 5rem;
+    height: 2.2rem;
+    border: .2px;
+    color: white;
+    border-radius: .1rem;
+    background-color: $color-submit-btn;
+    &:hover {
+        background-color: darken($color-submit-btn, 15%);
+    }
+
+    position: absolute;
+    bottom: .2rem;
+    right: .2rem;
+}
+
+// contact list
+
+.contacts-container {
+    h3 {
+        position: absolute;
+        font-size: 2rem;
+        top: .2rem;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    margin: .7rem 2rem;
+    border: 1px solid black;
+    height: 33rem;
+    width: 17rem;
+
+    // display: flex;
+    // flex-direction: column;
+    //!!!
+    position: relative;
+
+
+    .contacts-container-salary {
+        position: absolute;
+
+    }
+}
+
+.contacts-container-search-bar {
+    width: 10rem;
+    margin-left: 6rem;
+}
+
+.contact-list-box {
+    position: absolute;
+    top: 4rem;
+    left: 50%;
+    height: 25rem;
+    transform: translate(-50%);
+    overflow: auto;
+}
+
+.rendered-contact-box {
+    margin: .3rem;
+    padding: .4rem;
+    display: grid;
+    grid-template-rows: 5rem 5rem;
+    grid-template-columns: 5rem 5rem;
+    place-items: center;
+    justify-content: space-around;
+    align-content: start;
+    width: 14rem;
+    top: 4rem;
+    border: 1px solid black;
+    height: 10rem;
+}
+
+.contacts-container-salary {
+    position: absolute;
+    bottom: .2rem;
+    left: .2rem;
+
+    div {
+        font-size: 13px;
+    }
+}
+
+    .contact-panel {
+         p {
+            margin: .5rem 0;
+         }
+        font-size: 1rem;
+        grid-area: 1 / 2;
+    }
+
+    .btn-edit {
+        grid-area: 2 / 1 / span 1 / span 1;
+        button {
+            @include btn-edit-delete()
+        }
+    }
+
+    .btn-delete {
+        grid-area: 2 / 2 / span 1 / span 1;
+        button {
+            @include btn-edit-delete()
+        }
+    }
+
+
+
+
+
+
+
